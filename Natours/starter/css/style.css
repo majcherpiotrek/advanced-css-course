@@ -66,12 +66,57 @@ body {
     left: 40px;
 }
 
+.logo-box-animated {
+    animation: logoMoveIn 1s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
 .logo {
     height: 35px;
 }
 
 .logo:hover {
     animation: logoShake .5s ease-out;
+}
+
+@keyframes logoMoveIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoShake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    75% {
+        transform: translateX(3px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .text-box {
@@ -157,24 +202,6 @@ body {
     100% {
         opacity: 1;
         transform: translate(0);
-    }
-}
-
-@keyframes logoShake {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(-3px);
-    }
-
-    75% {
-        transform: translateX(3px);
-    }
-
-    100% {
-        transform: translateX(0);
     }
 }
 
