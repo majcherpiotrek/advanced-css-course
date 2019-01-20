@@ -1,0 +1,44 @@
+@keyframes headerFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes logoMoveIn {
+    0% { @include opacityAndTransform(0, translateY(-10rem)); }
+    60% { @include opacityAndTransform(1, translateY(1rem)); }
+    80% { @include opacityAndTransform(1, translateY(-.5rem)); }
+    100% { @include opacityAndTransform(1, translateY(0)); }
+}
+
+@keyframes logoShake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-.3rem); }
+    75% { transform: translateX(.3rem); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes moveInLeft {
+    0% { @include opacityAndTransform(0, translateX(-10rem)); }
+    60% { @include opacityAndTransform(1, translateX(2rem)); }
+    80% { @include opacityAndTransform(1, translateX(-1rem)); }
+    100% { @include opacityAndTransform(1, translate(0)); }
+}
+
+@keyframes moveInRight {
+    0% { @include opacityAndTransform(0, translateX(10rem)); }
+    60% { @include opacityAndTransform(1, translateX(-2rem)); }
+    80% { @include opacityAndTransform(1, translateX(1rem)); }
+    100% { @include opacityAndTransform(1, translate(0)); }
+}
+
+@keyframes btnExplode {
+    0% { @include opacityAndTransform(1, scale(1)); }
+    100% { @include opacityAndTransform(0, scaleX(1.4) scaleY(1.6)); }
+}
+
+@keyframes moveInBottom {
+    0% { @include opacityAndTransform(0, translateY(10rem)); }
+    60% { @include opacityAndTransform(1, translateY(-1rem)); }
+    80% { @include opacityAndTransform(1, translateY(.5rem)); }
+    100% { @include opacityAndTransform(1, translate(0)); }
+}

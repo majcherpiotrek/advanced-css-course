@@ -1,0 +1,65 @@
+.btn {
+    &:link,
+    &:visited {
+        display: inline-block; /* compared to block does not add line break and does not resize to max width */
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        border-radius: 999px;
+        transition: all .2s;
+        box-shadow: 0 .2rem .5rem rgba($color-black, .2);
+        position: relative;
+        font-size: 1.6rem;
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+        &::after {
+            animation: btnExplode .3s linear;
+            /*
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0; 
+             */
+        }
+    }
+    
+    &:active {
+        /* For the illusion of pressing down the button */
+        transform: translateY(0px); /* in relation to base state ( not hover ! )*/
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+
+    /* :after pseudo elemt adds kind of virtual element right after the base element */
+    &::after {
+        content: "";
+        display: inline-block; /* because the button is also inline-block */
+        
+        /* in order to be same size as the button */
+        height: 100%;
+        width: 100%;
+        border-radius: 99rem;
+        /* -------------------------------------- */
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        /* transition: all .4s; */
+    }
+    
+    &--white {
+        background-color: $color-white;
+        color: $color-gray-dark;
+
+        &::after {
+            background-color: inherit;
+        }
+    }
+    
+    &--animated {
+        animation: moveInBottom 1s ease-out 1.5s;
+        animation-fill-mode: backwards; /* appplies the animations' 0% state in the beginning */
+    }    
+}

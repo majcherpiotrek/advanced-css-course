@@ -1,0 +1,4 @@
+@mixin opacityAndTransform($opacityValue, $transformValue) {
+    opacity: $opacityValue;
+    transform: $transformValue;
+}

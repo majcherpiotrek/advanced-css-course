@@ -1,0 +1,56 @@
+.header {
+    height: 95vh; /* Always 95% of the viewport height */
+    /* background-image: linear-gradient(
+        to right bottom,
+        rgba(126, 213, 111, .6),
+        rgba(40, 180, 131, .8)),
+    url('../img/hero.jpg'); */
+    /* background-image: linear-gradient(
+        to right bottom,
+        rgba(216, 180, 160, .8),
+        rgba(215, 122, 97, .8)),
+    url('../img/sunset-club.jpg'); */
+    // background-image: linear-gradient(
+    //     to right bottom,
+    //     rgba(144, 215, 255, .8),
+    //     rgba(93, 253, 203, .8)),
+    // url('../img/sunset-club.jpg');
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, .8),
+        rgba($color-primary-dark, .8)),
+    url('../img/sunset-club.jpg');
+    background-size: cover;
+    background-position: top; /* Background will not be cropped from the top when resizing*/
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+
+    animation: headerFadeIn 1s ease-in;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+
+        &--animated {
+            animation: logoMoveIn 1s ease-out .75s;
+            animation-fill-mode: backwards;
+        }
+    }
+
+    &__logo {
+        height: 3.5rem;
+        &:hover {
+            animation: logoShake .5s ease-out;
+        }
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
