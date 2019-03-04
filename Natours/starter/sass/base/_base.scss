@@ -11,6 +11,7 @@ html {
     /* font-size: 10px;  actually a bad practice, because the user cannot change the browser default font-size*/
     
     font-size: 62.5%; /* 10px when default font-size is 16px */
+    scroll-behavior: smooth;
 }
 
 body {

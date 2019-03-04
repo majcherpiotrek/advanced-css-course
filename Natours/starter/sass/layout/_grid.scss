@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
     margin: 0 auto; // center block elements inside other block element
 
     &:not(:last-child) {
@@ -10,7 +9,6 @@
     @include clearfix(); // because the height of an element with all floating children collapses!
 
     [class^="col-"] {
-        background-color: orangered;
         float: left;
 
         &:not(:last-child) {
